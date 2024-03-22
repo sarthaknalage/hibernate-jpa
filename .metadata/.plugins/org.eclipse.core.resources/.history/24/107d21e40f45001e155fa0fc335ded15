@@ -1,0 +1,67 @@
+package sarthak.nalage.testing.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "employee")
+public class Employee {
+	
+	@Id
+	@Column(name="std_num")
+	private Integer roll_number;
+	
+	@Column(name="std_name")
+	private String name;
+	
+	@Column(name="std_marks")
+	private Integer marks;
+
+	public Student() {
+		super();
+	}
+	
+	public Student(Integer roll_number, String name, Integer marks) {
+		super();
+		this.roll_number = roll_number;
+		this.name = name;
+		this.marks = marks;
+	}
+	
+	@Override
+	public String toString() {
+		return "Student [roll_number=" + roll_number + ", name=" + name + ", marks=" + marks + "]";
+	}
+
+	public Integer getRoll_number() {
+		return roll_number;
+	}
+
+	public void setRoll_number(Integer roll_number) {
+		this.roll_number = roll_number;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Integer getMarks() {
+		return marks;
+	}
+
+	public void setMarks(Integer marks) {
+		this.marks = marks;
+	}
+
+	
+	
+	
+	
+
+}

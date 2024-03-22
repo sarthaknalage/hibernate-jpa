@@ -1,0 +1,21 @@
+package sarthak.nalage.testing;
+
+import org.hibernate.Query;
+
+import sarthak.nalage.testing.model.Employee;
+import sarthak.nalage.testing.registration.GetSessionFactory;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main ( String[] args )throws Exception
+    {
+    	org.hibernate.Session session= GetSessionFactory.getSessionFactory().openSession();
+    	Query<Employee> query= session.createQuery("select from Employee");
+    	List<Employee> list=query.list();
+    	System.out.println(list);
+    }
+}
